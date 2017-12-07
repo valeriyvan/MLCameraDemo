@@ -16,8 +16,7 @@ class CameraPreviewView: UIView {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Observe device rotation
-        let selector = #selector(deviceOrientationDidChange(_:))
-        UIDevice.subscribeToDeviceOrientationNotifications(self, selector:selector)        
+        UIDevice.subscribeToDeviceOrientationNotifications(self, selector:#selector(deviceOrientationDidChange(_:)))        
     }
     
     /// Insert layer at index 0
